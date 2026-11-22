@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
 dist/
+.vercel/
 REQUIREMENTS.md
 APPLICATION.md

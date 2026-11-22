@@ -139,6 +139,9 @@ class AppHandler(BaseHTTPRequestHandler):
         if self.path != "/api/draft":
             self.send_error(404)
             return
+        self.handle_draft()
+
+    def handle_draft(self):
         try:
             length = int(self.headers.get("Content-Length", 0))
             if self.headers.get_content_type() != "application/json" or not 0 < length <= 8192:

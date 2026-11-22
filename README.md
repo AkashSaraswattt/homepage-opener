@@ -30,3 +30,9 @@ The optional model uses the [local Ollama chat API](https://docs.ollama.com/api/
 The fetcher reads one public HTML page and follows up to four redirects. It prefers visible text and can fall back to a public page description in the HTML metadata. The result identifies the meta tag when that happens. Sites that block automated requests or provide no product copy in the HTML may return an error. Drafts are in English and preserve source excerpts in their original wording.
 
 Run the regression checks with `python -m unittest`.
+
+## Deploy on Vercel
+
+Import the repository in Vercel. The included configuration serves the frontend from `web/` and runs `/api/draft` as a Python function. The hosted version uses the built-in drafting rules. Follow the local setup above to try Ollama.
+
+After deploying, open the deployment URL and click **Try an example**. Confirm that the app returns a three-line draft and shows the source excerpt.

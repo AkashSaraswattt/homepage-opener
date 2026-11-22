@@ -34,3 +34,5 @@ Run the regression checks with `python -m unittest`.
 ## Deploy on Vercel
 
 Import the repository in Vercel. The included configuration serves the frontend from `web/` and runs `/api/draft` as a Python function. The hosted version uses the built-in drafting rules. Follow the local setup above to try Ollama.
+
+After deploying, open the deployment URL and click **Try an example**. Confirm that the app returns a three-line draft and shows the source excerpt.

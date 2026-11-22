@@ -1,0 +1,59 @@
+:root {
+  color-scheme: light;
+  background: #f4f4eb;
+  color: #202a23;
+  font: 16px/1.55 system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body { margin: 0; }
+main { width: min(100% - 36px, 690px); margin: clamp(44px, 10vh, 108px) auto 48px; }
+.intro { margin-bottom: 28px; }
+.intro h1 {
+  margin: 0;
+  font: 400 clamp(2.55rem, 8vw, 4.25rem)/1.04 Georgia, serif;
+  letter-spacing: -0.055em;
+}
+.intro p { margin: 14px 0 0; color: #465449; }
+.intro a { display: inline-block; margin-bottom: 20px; }
+
+.panel {
+  background: #fffef9;
+  border: 1px solid #d8dacf;
+  border-radius: 18px;
+  padding: clamp(18px, 4vw, 28px);
+  margin-bottom: 16px;
+}
+label { display: block; font-weight: 650; margin-bottom: 8px; }
+.form-row, .result-header { display: flex; gap: 10px; align-items: center; }
+.result-header { justify-content: space-between; }
+input, button { font: inherit; border-radius: 9px; min-height: 44px; }
+input { flex: 1; min-width: 0; width: 100%; padding: 10px 13px; border: 1px solid #9ca79b; background: white; }
+button { border: 1px solid transparent; background: #24563e; color: white; padding: 8px 15px; cursor: pointer; font-weight: 650; }
+button:hover { background: #1a4430; }
+button:disabled { opacity: 0.6; cursor: wait; }
+a, .text-button { color: #24563e; text-underline-offset: 3px; }
+.text-button { background: transparent; padding: 0; text-decoration: underline; }
+.text-button:hover { background: transparent; color: #132c1f; }
+.secondary { background: transparent; color: #24563e; border-color: #9eafa2; white-space: nowrap; }
+.secondary:hover { background: #edf3ec; }
+:focus-visible { outline: 2px solid #28704f; outline-offset: 3px; }
+.feedback { margin: 8px 0 0; }
+.error { color: #962d2d; }
+h2, h3 { margin: 0; line-height: 1.2; }
+h2 { font: 400 1.72rem/1.2 Georgia, serif; }
+h3 { font-size: 0.88rem; }
+.draft { margin: 17px 0 22px; }
+.draft p { margin: 8px 0; overflow-wrap: anywhere; }
+.source { padding: 14px 16px; background: #edf0e7; border-radius: 10px; overflow-wrap: anywhere; }
+blockquote { margin: 6px 0; }
+.source a, .source-note, .method { font-size: 0.88rem; }
+.source-note { margin: 6px 0; }
+.method { margin: 12px 0 0; color: #465449; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+@media (max-width: 420px) {
+  .form-row { align-items: stretch; flex-direction: column; }
+}

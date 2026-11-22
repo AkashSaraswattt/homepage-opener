@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage Opener</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/ui.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <h1>Homepage Opener</h1>
+      <p>Turn a company’s homepage into a three-line email opener for its founder.</p>
+    </header>
+
+    <form id="draft-form" class="panel">
+      <label for="website">Company website</label>
+      <div class="form-row">
+        <input id="website" name="website" type="text" inputmode="url" autocomplete="url"
+          spellcheck="false" placeholder="company.com" maxlength="2048" required>
+        <button id="generate" type="submit">Draft opener</button>
+      </div>
+      <button id="sample" class="text-button" type="button">Try an example</button>
+      <p id="progress" class="feedback" role="status" hidden></p>
+      <p id="error" class="feedback error" role="alert" hidden></p>
+    </form>
+
+    <section id="result" class="panel" aria-labelledby="result-heading" hidden>
+      <div class="result-header">
+        <h2 id="result-heading" tabindex="-1">Your opener</h2>
+        <button id="copy" class="secondary" type="button">Copy opener</button>
+      </div>
+      <div id="lines" class="draft"></div>
+      <div class="source">
+        <h3 id="source-heading">Homepage excerpt</h3>
+        <blockquote id="excerpt"></blockquote>
+        <p id="source-note" class="source-note" hidden></p>
+        <a id="source-link" target="_blank" rel="noopener noreferrer">Open source page ↗</a>
+      </div>
+      <p id="method" class="method"></p>
+      <p id="copy-status" class="sr-only" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>
